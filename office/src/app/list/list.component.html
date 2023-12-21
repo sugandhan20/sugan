@@ -1,0 +1,27 @@
+<h1>Office Details List</h1>
+<hr>
+<div class="table table-hover" class="container-fluid">
+    <table class="table " style="background-color: rgba(0, 0, 0, 0.7);color: azure;">
+        <tr style="color: darkgoldenrod;">
+            <th>S.No</th>
+            <th>Name</th>
+            <th>noOfEmployees</th>
+            <th>Location</th>
+            <th>Office Type</th>
+            <th>Buttons</th>
+        </tr>
+        <tr *ngFor="let p of Offices;let i=index">
+            <td>{{i+1}}</td>
+            <td>{{p.name}}</td>
+            <td>{{p.noofemployees}}</td>
+            <td>{{p.location}}</td>
+            <td>{{p.officetype}}</td>
+            <td><button style="margin-left: 25px;" class="btn btn-outline-info" (click)="gotoview(p.id)">View</button>
+                <button style="margin-left: 25px;" class="btn btn-outline-success" (click)="gotoupdate(p.id)">Update</button>
+                <button style="margin-left: 25px;" class="btn btn-outline-danger" (click)="deletebyid(p.id)">Delete</button>
+            </td>
+        </tr>
+    </table>
+    <button (click)="gotopostoff()" class="btn btn-warning" style="width: 150px;">Add New Data</button>
+
+</div>

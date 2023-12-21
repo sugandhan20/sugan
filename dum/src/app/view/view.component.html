@@ -1,0 +1,31 @@
+
+<button (click)="gotopost()">AddNew</button>
+<table border="2px">
+<th>
+    <tr >
+        <th>S.No</th>
+        <th>name</th>
+        <th>age</th>
+        <th>gender</th>
+        <th>section</th>
+        <th>Buttons</th>
+
+    </tr>
+    <tbody>
+        <tr *ngFor="let s of student, let i=index">
+            <td>{{i+1}}</td>
+            <td>{{s.name}}</td>
+            <td>{{s.age}}</td>
+            <td>{{s.gender}}</td>
+            <td>{{s.section}}</td>
+            <td><button (click)="gotoget(s._id)">View</button>
+                <button (click)="gotoupd(s._id)">Update</button>
+                <button (click)="gotodel(s._id)">Delete</button>
+            </td>
+            
+        </tr>
+    </tbody>
+</th>
+
+
+</table>

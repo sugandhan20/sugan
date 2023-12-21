@@ -1,0 +1,8 @@
+table,td,th{
+border: 1px solid gray;
+}
+body {
+    background-image: url('src/assets/pexels-pixabay-458983.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}

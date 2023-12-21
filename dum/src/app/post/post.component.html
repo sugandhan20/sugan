@@ -1,0 +1,18 @@
+<fieldset style="width: 400px;">
+
+<form (submit)="onSubmit()" >
+    <label >NAME:</label>
+<input type="text" name="name" [(ngModel)]="student.name"><br><br>
+<label >AGE:</label>
+<input type="number" name="age" [(ngModel)]="student.age"><br><br>
+<label >GENDER:</label>
+<input type="radio" name="gender" value="Male" [(ngModel)]="student.gender">Male
+<input type="radio" name="gender" value="Female" [(ngModel)]="student.gender" >Female
+<br><br>  
+<label>SECTION:</label>
+<input type="text" name="section" [(ngModel)]="student.section"><br><br>
+
+<button >Submit</button><br><br>
+<button (click)="backtohome()">Back</button>
+</form>
+</fieldset>

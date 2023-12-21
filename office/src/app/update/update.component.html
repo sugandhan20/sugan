@@ -1,0 +1,43 @@
+
+<h1>Update Data</h1>
+<hr>
+<form [formGroup]="formoffice1" style="border: 2px solid black;margin: auto ;width: 600px; background-color: rgba(0, 0, 0, 0.7);color: azure;">
+    <div class="container">
+    <div ><br>
+        <label>Enter Name:</label>
+        <input type="text" name="name" formControlName="name" >
+        <span style="color: red;">
+            <span *ngIf="name?.errors?.['minlength']">*Enter FullName</span>
+            <span *ngIf="name?.invalid && name?.touched ">*Name Required</span>
+            </span>
+    </div><br>
+    <div>
+        <label>Enter No Of Employees:</label>
+        <input type="text" name="empno" formControlName="noofemployees">
+        <span style="color: red;">
+            <span *ngIf="noofemployees?.invalid && noofemployees?.touched ">*NoOfEmployee Required</span>
+            </span>
+    </div>
+    <div><br>
+        <label>Enter Location:</label>
+        <input type="text" name="location" formControlName="location">
+        <span style="color: red;">
+            <span *ngIf="location?.invalid && location?.touched ">*Location Required</span>
+            </span>
+    </div>
+    <div><br>
+        <label>Enter Office Type:</label>
+        <input type="radio" name="officetype" value="it" formControlName="officetype" >IT
+        <input type="radio" name="officetype"  value="Government" formControlName="officetype" >Government
+        <input type="radio" name="officetype"  value="finance" formControlName="officetype" >finance
+        <input type="radio" name="officetype"  value="Other"formControlName="officetype" >Other
+        <span style="color: red;">
+            <span *ngIf="noofemployees?.invalid && noofemployees?.touched ">*OfficeType Required</span>
+            </span>
+    </div><br>
+    <div>
+        <button   class="btn btn-outline-info" style="width: 170px;" (click)="onSubmit()" >Submit</button><br><br>
+        <button (click)="back()" class="btn btn-outline-light" style="width: 120px;">Back</button>
+    </div>
+</div>
+</form>
